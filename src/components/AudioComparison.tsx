@@ -4,7 +4,7 @@ import { Play, Pause, RotateCcw, Download, Headphones, AudioLines, ScanLine, Inf
 import { RecordData, number, signed } from "./shared";
 import {assetUrl} from "../data-client";
 
-const colors: Record<string,string> = {input:"#6095be", enhanced:"#12a58a", reference:"#9a89bb"};
+const colors: Record<string,string> = {input:"#8392a8", enhanced:"#386bd3", reference:"#9c85b9"};
 const names: Record<string,string> = {input:"模型输入", enhanced:"增强输出", reference:"参考人声"};
 const clock = (v:number) => `${Math.floor((v||0)/60)}:${String(Math.floor((v||0)%60)).padStart(2,"0")}`;
 function mediaOf(item:RecordData) {const media=item.media||item.audio||{}; return {input:media.input||media.noisy||null, enhanced:media.enhanced||media.output||null, reference:media.reference||null};}
@@ -21,38 +21,38 @@ function VisualPlot({item,mode,position,onSeek}:{item:RecordData;mode:string;pos
       ctx.font='11px "Segoe UI", "Microsoft YaHei", sans-serif';
       const keys=["input","enhanced","reference"].filter(k=>mode==="waveform"?data[`min_${k}`]?.length:data[`${k}_db`]?.length);
       const left=62,right=mode==="spectrogram"?42:18,top=29,bottom=24,gap=25,pw=w-left-right;
-      if(!keys.length){ctx.fillStyle="#687a87";ctx.fillText("这份记录没有可绘制的数据",left,55);return;}
+      if(!keys.length){ctx.fillStyle="#677b99";ctx.fillText("这份记录没有可绘制的数据",left,55);return;}
       const rh=(h-top-bottom-gap*(keys.length-1))/keys.length;
       if(mode==="waveform"){
         const peak=Math.max(0.001,...keys.flatMap(k=>[...data[`min_${k}`].map((v:number)=>Math.abs(v)),...data[`max_${k}`].map((v:number)=>Math.abs(v))]));
-        keys.forEach((k,j)=>{const y=top+j*(rh+gap),mid=y+rh/2,mins=data[`min_${k}`],maxs=data[`max_${k}`];ctx.fillStyle=colors[k];ctx.textAlign="left";ctx.fillText(names[k],left,y-8);ctx.strokeStyle="#dce8eb";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(left,mid);ctx.lineTo(w-right,mid);ctx.stroke();ctx.strokeStyle=colors[k];ctx.lineWidth=Math.max(.8,pw/mins.length*.7);ctx.beginPath();mins.forEach((v:number,i:number)=>{const x=left+(data.time_seconds?.[i]??i/mins.length*duration)/duration*pw;ctx.moveTo(x,mid-maxs[i]/peak*rh*.47);ctx.lineTo(x,mid-v/peak*rh*.47)});ctx.stroke();ctx.fillStyle="#94a2ac";ctx.textAlign="right";ctx.fillText(number(peak,2),left-8,y+5);ctx.fillText("0",left-8,mid+3);});
+        keys.forEach((k,j)=>{const y=top+j*(rh+gap),mid=y+rh/2,mins=data[`min_${k}`],maxs=data[`max_${k}`];ctx.fillStyle=colors[k];ctx.textAlign="left";ctx.fillText(names[k],left,y-8);ctx.strokeStyle="#e0e6ee";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(left,mid);ctx.lineTo(w-right,mid);ctx.stroke();ctx.strokeStyle=colors[k];ctx.lineWidth=Math.max(.8,pw/mins.length*.7);ctx.beginPath();mins.forEach((v:number,i:number)=>{const x=left+(data.time_seconds?.[i]??i/mins.length*duration)/duration*pw;ctx.moveTo(x,mid-maxs[i]/peak*rh*.47);ctx.lineTo(x,mid-v/peak*rh*.47)});ctx.stroke();ctx.fillStyle="#7586a0";ctx.textAlign="right";ctx.fillText(number(peak,2),left-8,y+5);ctx.fillText("0",left-8,mid+3);});
       } else {
         const low=data.min_db??-100,high=data.max_db??0;
-        const color=(db:number)=>{const t=Math.max(0,Math.min(1,(db-low)/(high-low))); const a=t<.5?[18,38,58]:[28,145,140],b=t<.5?[28,145,140]:[250,219,153],r=t<.5?t*2:(t-.5)*2;return a.map((v,i)=>Math.round(v+(b[i]-v)*r));};
-        keys.forEach((k,j)=>{const values=data[`${k}_db`],y=top+j*(rh+gap),image=document.createElement("canvas");image.width=values.length;image.height=values[0].length;const ic=image.getContext("2d")!;const pixels=ic.createImageData(image.width,image.height);for(let t=0;t<image.width;t++)for(let f=0;f<image.height;f++){const off=((image.height-f-1)*image.width+t)*4;const rgb=color(values[t][f]);pixels.data.set([...rgb,255],off);}ic.putImageData(pixels,0,0);ctx.imageSmoothingEnabled=false;ctx.drawImage(image,left,y,pw,rh);ctx.imageSmoothingEnabled=true;ctx.fillStyle=colors[k];ctx.textAlign="left";ctx.fillText(names[k],left,y-8);ctx.fillStyle="#8b9aa5";ctx.textAlign="right";ctx.fillText("8 kHz",left-8,y+5);ctx.fillText("0",left-8,y+rh);});
-        const grad=ctx.createLinearGradient(0,h-bottom,0,top);grad.addColorStop(0,"#12263a");grad.addColorStop(.5,"#1c918c");grad.addColorStop(1,"#fadB99");ctx.fillStyle=grad;ctx.fillRect(w-26,top,6,h-top-bottom);ctx.font="9px sans-serif";ctx.fillStyle="#8b9aa5";ctx.textAlign="left";ctx.fillText("0",w-17,top+6);ctx.fillText("−100",w-25,h-bottom+13);
+        const color=(db:number)=>{const t=Math.max(0,Math.min(1,(db-low)/(high-low))); const a=t<.5?[20,35,65]:[35,113,155],b=t<.5?[35,113,155]:[240,221,110],r=t<.5?t*2:(t-.5)*2;return a.map((v,i)=>Math.round(v+(b[i]-v)*r));};
+        keys.forEach((k,j)=>{const values=data[`${k}_db`],y=top+j*(rh+gap),image=document.createElement("canvas");image.width=values.length;image.height=values[0].length;const ic=image.getContext("2d")!;const pixels=ic.createImageData(image.width,image.height);for(let t=0;t<image.width;t++)for(let f=0;f<image.height;f++){const off=((image.height-f-1)*image.width+t)*4;const rgb=color(values[t][f]);pixels.data.set([...rgb,255],off);}ic.putImageData(pixels,0,0);ctx.imageSmoothingEnabled=false;ctx.drawImage(image,left,y,pw,rh);ctx.imageSmoothingEnabled=true;ctx.fillStyle=colors[k];ctx.textAlign="left";ctx.fillText(names[k],left,y-8);ctx.fillStyle="#7586a0";ctx.textAlign="right";ctx.fillText("8 kHz",left-8,y+5);ctx.fillText("0",left-8,y+rh);});
+        const grad=ctx.createLinearGradient(0,h-bottom,0,top);grad.addColorStop(0,"#142341");grad.addColorStop(.5,"#23719b");grad.addColorStop(1,"#f0dd6e");ctx.fillStyle=grad;ctx.fillRect(w-26,top,6,h-top-bottom);ctx.font="9px sans-serif";ctx.fillStyle="#7586a0";ctx.textAlign="left";ctx.fillText("0",w-17,top+6);ctx.fillText("−100",w-25,h-bottom+13);
       }
-      ctx.fillStyle="#8b9aa5";ctx.textAlign="center";ctx.font="10px sans-serif";for(let i=0;i<=4;i++)ctx.fillText(`${number(duration*i/4,duration<10?1:0)}${i===4?" s":""}`,left+pw*i/4,h-5);
-      if(position<=duration){const x=left+position/duration*pw;ctx.strokeStyle="#153e55aa";ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,h-bottom);ctx.stroke();}
+      ctx.fillStyle="#7586a0";ctx.textAlign="center";ctx.font="10px sans-serif";for(let i=0;i<=4;i++)ctx.fillText(`${number(duration*i/4,duration<10?1:0)}${i===4?" s":""}`,left+pw*i/4,h-5);
+      if(position<=duration){const x=left+position/duration*pw;ctx.strokeStyle="#386bd3aa";ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,h-bottom);ctx.stroke();}
     };paint();const observer=new ResizeObserver(paint);if(wrap.current)observer.observe(wrap.current);return()=>observer.disconnect();
   },[data,duration,mode,position]);
   return <><div ref={wrap} className="audio-visual" onClick={e=>{if(!data)return; const r=e.currentTarget.getBoundingClientRect();onSeek(Math.max(0,Math.min(duration,(e.clientX-r.left-62)/(r.width-62-(mode==="spectrogram"?42:18))*duration)));}}>{data?<canvas ref={canvas} role="img" aria-label={mode==="waveform"?"处理前后统一幅值波形":"处理前后统一色标时频谱"}/>:<div className="plot-empty">这份记录暂无{mode==="waveform"?"波形":"时频谱"}证据，仍可试听。</div>}</div><p className="plot-caption">{data?.scope || (mode==="waveform"?"各音源使用同一幅值尺度；点击图中位置可跳转试听。":"各音源使用相同色标，颜色变淡不等于质量一定改善。")}</p></>;
 }
 function WaveOverview({item,position,source,onSeek}:{item:RecordData;position:number;source:string;onSeek:(seconds:number)=>void}){
   const data=item.plots?.waveform,duration=data?.duration_seconds||item.durationSeconds||4;
-  const tracks=useMemo(()=>{
-    if(!data)return [];
+  const geometry=useMemo(()=>{
+    if(!data)return {tracks:[],peak:null};
     const peak=Math.max(.0001,...['input','enhanced','reference'].flatMap(role=>[...(data[`min_${role}`]||[]),...(data[`max_${role}`]||[])].map((value:number)=>Math.abs(value))));
-    return ['input','enhanced'].filter(role=>data[`min_${role}`]?.length).map(role=>{
-      const minimum:number[]=data[`min_${role}`],maximum:number[]=data[`max_${role}`],bins=Math.min(96,minimum.length);
+    const tracks=['input','enhanced'].filter(role=>data[`min_${role}`]?.length).map(role=>{
+      const minimum:number[]=data[`min_${role}`],maximum:number[]=data[`max_${role}`],bins=Math.min(144,minimum.length);
       const path=Array.from({length:bins},(_,index)=>{
         const start=Math.floor(index*minimum.length/bins),end=Math.max(start+1,Math.floor((index+1)*minimum.length/bins));
         const low=Math.min(...minimum.slice(start,end)),high=Math.max(...maximum.slice(start,end)),x=4+index/Math.max(1,bins-1)*592;
         return `M${x.toFixed(1)},${(35-high/peak*29).toFixed(1)}V${(35-low/peak*29).toFixed(1)}`;
       }).join('');return {role,path};
-    });
+    });return {tracks,peak};
   },[data]);
-  return <div className="wave-overview" aria-label="输入与增强波形概览，使用同一幅值尺度">{tracks.map(track=><div className="wave-row" key={track.role}><span>{track.role==='input'?'输入录音':'增强输出'}</span><svg viewBox="0 0 600 70" role="img" aria-label={track.role==='input'?'输入录音真实波形':'增强输出真实波形'} onClick={event=>{const rect=event.currentTarget.getBoundingClientRect();onSeek(Math.max(0,Math.min(duration,(event.clientX-rect.left)/rect.width*duration)));}}><line x1="0" x2="600" y1="35" y2="35" stroke="#303e57"/><path d={track.path} fill="none" stroke={track.role==='input'?'#8294b1':'#8aaaff'} strokeWidth="2.8" opacity={source===track.role?1:.55}/><line x1={Math.min(600,position/duration*600)} x2={Math.min(600,position/duration*600)} y1="0" y2="70" stroke="#cad8ff" opacity=".75"/></svg></div>)}<div className="wave-overview-axis"><span>0.0 s</span><span>同一幅值尺度</span><span>{number(duration,1)} s</span></div></div>;
+  return <div className="wave-overview" aria-label="输入与增强波形概览，使用同一幅值尺度">{geometry.tracks.map(track=><div className="wave-row" key={track.role}><span>{track.role==='input'?'INPUT':'OUTPUT'}<small>{track.role==='input'?'输入录音':'增强输出'}</small></span><svg viewBox="0 0 600 70" role="img" aria-label={track.role==='input'?'输入录音真实波形':'增强输出真实波形'} onClick={event=>{const rect=event.currentTarget.getBoundingClientRect();onSeek(Math.max(0,Math.min(duration,(event.clientX-rect.left)/rect.width*duration)));}}>{[0,1,2,3,4,5,6,7,8].map(index=><line key={index} x1={index*75} x2={index*75} y1="0" y2="70" stroke="#e4e9f0" strokeWidth=".7"/>)}{[12,35,58].map(y=><line key={y} x1="0" x2="600" y1={y} y2={y} stroke="#d8e1ed" strokeWidth=".6"/>)}<path d={track.path} fill="none" stroke={track.role==='input'?'#8392a8':'#386bd3'} strokeWidth="2" opacity={source===track.role?1:.72}/><line x1={Math.min(600,position/duration*600)} x2={Math.min(600,position/duration*600)} y1="0" y2="70" stroke="#4c6690" opacity=".85"/></svg></div>)}<div className="wave-overview-axis">{[0,1,2,3,4].map(index=><span key={index}>{number(duration*index/4,1)}{index===4?' s':''}</span>)}</div><div className="wave-domain"><span>真实波形 · 共同幅值尺度</span><span>{geometry.peak===null?'幅值无法确认':`±${number(geometry.peak,2)}`}</span></div></div>;
 }
 export default function AudioComparison({item,compact=false,preview=false}:{item:RecordData;compact?:boolean;preview?:boolean}) {return <AudioPlayer key={`${item.id||item.case_id||"result"}:${mediaOf(item).input||""}`} item={item} compact={compact} preview={preview}/>;}
 function AudioPlayer({item,compact=false,preview=false}:{item:RecordData;compact?:boolean;preview?:boolean}) {
@@ -66,8 +66,8 @@ function AudioPlayer({item,compact=false,preview=false}:{item:RecordData;compact
 
   function seek(n:number){const a=ref.current;if(pending.current)pending.current.position=n;if(a&&a.readyState>=1)a.currentTime=Math.min(a.duration,n);setPosition(n);}
   function toggle(){const a=ref.current;if(!a)return;if(pending.current){pending.current.playing=!pending.current.playing;return;}if(a.paused)a.play().catch(()=>setError("音频暂时无法播放，请稍后重试或下载文件。"));else a.pause();}
-  return <div className={`audio-comparison ${compact?"compact":""} ${preview?"audio-preview":""}`} role="group" aria-label={preview?'首屏音频对比':'完整音频对比'}>
-    <div className="audio-detail-header"><div><span className="eyebrow">A/B LISTENING</span><h3>{item.title||item.label||"本次处理结果"}</h3></div><span className="small-tag"><Headphones size={14}/>建议佩戴耳机</span></div>
+  return <div className={`audio-comparison ${compact?"compact":""} ${preview?"audio-preview":""} ${playing?"is-playing":""}`} role="group" aria-label={preview?'首屏音频对比':'完整音频对比'}>
+    <div className="audio-detail-header"><div><span className="eyebrow">A/B LISTENING</span><h3>{item.title||item.label||"本次处理结果"}</h3></div>{preview?<span className="play-state">{playing?"播放中":"待播放"}</span>:<span className="small-tag"><Headphones size={14}/>建议佩戴耳机</span>}</div>
     {item.description&&<p className="audio-description">{item.description}</p>}
     {!Object.values(media).some(Boolean)&&<div className="notice"><Info size={17}/><span>这条精选仅公开结论，没有公开试听音频。音频对比无法确认。</span></div>}
     <div className="audio-plot-toolbar"><div className="segmented"><button aria-pressed={mode==="waveform"} className={mode==="waveform"?"selected":""} onClick={()=>setMode("waveform")}><AudioLines size={15}/>波形</button><button aria-pressed={mode==="spectrogram"} className={mode==="spectrogram"?"selected":""} onClick={()=>setMode("spectrogram")}><ScanLine size={15}/>时频谱</button></div><span>统一尺度 · 点击定位</span></div>

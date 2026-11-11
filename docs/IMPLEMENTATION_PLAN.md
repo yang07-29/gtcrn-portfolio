@@ -29,5 +29,5 @@
 - [x] Copy only approved public snapshot assets; bind exact source bytes with a manifest.
 - [x] Adapt public components and read-only data access; replace cloud-workspace links with a local demonstration guide.
 - [x] Add base-path, error, concurrency and snapshot-identity tests; compile the standalone application.
-- [ ] Audit staged files, push the public source, configure Pages and deploy through Actions.
-- [ ] Verify the actual public URL, resource hashes, evidence links and partial audio delivery; record browser limits independently.
+- [x] Audit staged files, push the public source, configure Pages and deploy through Actions.
+- [x] Verify the actual public URL, resource hashes, evidence links and partial audio delivery; record browser limits independently.

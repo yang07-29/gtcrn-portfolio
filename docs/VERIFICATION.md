@@ -9,9 +9,19 @@
 - 39 个公开资源的字节身份核验通过；13 组批次、3 个案例、9 个 WAV 保留，41 处数据/音频/证据引用可解析。
 - 三种子目标 SI-SDR、原官方集负结果、标准差和固定模型 SHA256 与原公开记录一致。
 
-## 待完成
+## 生产环境已完成
 
-- GitHub Pages 生产发布及实际首页/JSON/音频/证据访问检查。
+- 公开网址：https://yang07-29.github.io/gtcrn-portfolio/
+- 首次 Pages 发布：[GitHub Actions 42954437908](https://github.com/yang07-29/gtcrn-portfolio/actions/runs/42954437908)，结果 success；对应提交 `03cf1f2e16aeb14e769948f137447b62b9870114`。
+- 2026-11-11 11:44（北京时间）实测：43 项 HTTP/内容身份检查通过，0 项失败。首页、编译后的 JS/CSS、静态 JSON、全部公开音频及脱敏证据可达。
+- 线上 manifest 与本机批准快照一致；其中已发布资源逐文件校验 SHA256 和字节数，9 个 WAV 头有效。
+- 音频 Range 请求返回 `206`，`Content-Range: bytes 0-63/128044`，响应长度 64 字节。
+- 原 `gtcrn-headset-enhancement` 仓库仍为 private，独立 `gtcrn-portfolio` 仓库为 public。原算法仓库与 Sites 源码目录没有变更。
+
+## 未测试 / 待验证
+
 - 浏览器交互与手机试听：未测试。浏览器验收工具初始化报系统路径错误，未据此宣称通过。
 - 声卡、麦克风、耳机硬件：未测试。
 - 原 Sites 云端派发/领取/回传：待验证；备用展示站不执行这些操作。
+
+HTTP 可达与字节一致性不代替网页交互或听感结论。运行 `node scripts/verify-live.mjs https://yang07-29.github.io/gtcrn-portfolio/` 可生成新的只读复查报告；本机报告保存在被 Git 排除的 `outputs` 中。

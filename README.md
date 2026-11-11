@@ -2,6 +2,8 @@
 
 公开实验快照的独立展示站，使用 React、Vite 和 GitHub Pages。提供同位置 A/B 试听、统一尺度波形和时频谱、三种子结果、实验档案及脱敏证据下载。
 
+**公开网址：[打开 GTCRN 作品集](https://yang07-29.github.io/gtcrn-portfolio/)**
+
 ## 展示边界
 
 - 固定 E4 seed17，ONNX SHA256 为 `356bb3c94765b354138a40c9c09e0de7d39684c76e2b43a706c509e8ecb5ab03`。

@@ -1,7 +1,8 @@
 import {useEffect,useRef} from 'react';
 import {X,ArrowDownToLine} from 'lucide-react';
 import BatchAudioEvidence from './BatchAudioEvidence';
-import {Badge,EvidenceList,number,RecordData} from './shared';
+import {Badge,EvidenceList,RecordData} from './shared';
+import {measurementText} from '../metric-format';
 
 export default function BatchDetails({batch,cases,onClose}:{batch:RecordData;cases:RecordData[];onClose:()=>void}){
  const panel=useRef<HTMLElement>(null);
@@ -24,7 +25,7 @@ export default function BatchDetails({batch,cases,onClose}:{batch:RecordData;cas
   <h2 id="batch-title">{batch.title}</h2><Badge status={batch.status||'frozen'}/><p className="modal-summary">{batch.summary}</p>
   <BatchAudioEvidence cases={cases.filter(item=>item.batchId===batch.id)}/>
   {[["实验目的",batch.purpose],["实验方法",batch.method],["实验结论",batch.conclusion]].filter(item=>item[1]).map(([title,text])=><div className="detail-section" key={title}><h3>{title}</h3><p>{text}</p></div>)}
-  {!!batch.metrics?.length&&<div className="table-scroll"><table><thead><tr><th>指标与范围</th><th>实测结果</th><th>统计口径</th></tr></thead><tbody>{batch.metrics.map((metric:RecordData,index:number)=>{const count=['项','条','次','组','个'].includes(metric.unit)&&Number.isInteger(metric.value);const precision=count?0:metric.metricId==='stoi'||metric.name?.includes('STOI')?6:3;return <tr key={index}><td><strong>{metric.name}</strong><small>{metric.dataset} {metric.method}</small></td><td className="metric-number">{number(metric.value,precision)}{metric.spread!==undefined?` ± ${number(metric.spread,precision)}`:''} {metric.unit}</td><td>{metric.aggregation}<small>{metric.definition}</small></td></tr>;})}</tbody></table></div>}
+  {!!batch.metrics?.length&&<><p className="table-hint">指标表可左右滑动，查看完整统计口径。</p><div className="table-scroll" role="region" aria-label="实验指标表，可横向滚动" tabIndex={0}><table><thead><tr><th scope="col">指标与范围</th><th scope="col">实测结果</th><th scope="col">统计口径</th></tr></thead><tbody>{batch.metrics.map((metric:RecordData,index:number)=>{const count=['项','条','次','组','个'].includes(metric.unit)&&Number.isInteger(metric.value);const precision=count?0:metric.metricId==='stoi'||metric.name?.includes('STOI')?6:3;return <tr key={index}><td><strong>{metric.name}</strong><small>{metric.dataset} {metric.method}</small></td><td className="metric-number">{measurementText(metric.value,precision)}{metric.spread!==undefined?` ± ${measurementText(metric.spread,precision)}`:''} {metric.unit}</td><td>{metric.aggregation}<small>{metric.definition}</small></td></tr>;})}</tbody></table></div></>}
   {!!batch.boundaries?.length&&<div className="detail-section boundary-note"><h3>适用范围与限制</h3><ul>{batch.boundaries.map((item:string)=><li key={item}>{item}</li>)}</ul></div>}
   {!!batch.questions?.length&&<details className="detail-section"><summary>复现中的关键问题</summary><ul>{batch.questions.map((item:string|RecordData,index:number)=><li key={index}>{typeof item==='string'?item:<><strong>{item.q}</strong><p>{item.a}</p></>}</li>)}</ul></details>}
   {!!batch.evidence?.length&&<div className="detail-section"><h3><ArrowDownToLine size={16}/> 核对来源证据</h3><EvidenceList items={batch.evidence}/></div>}

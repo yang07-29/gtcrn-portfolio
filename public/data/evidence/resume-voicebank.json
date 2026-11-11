@@ -1,0 +1,31 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "reports/resume_voicebank.json",
+  "sourceSha256": "690fc2efcea7d5f5abeedae6ccbcc4b03b47d90a1fbed50ee79e9d6c2ecd9d02",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-18T07:56:27.880575+00:00",
+    "status": "passed",
+    "device": "cuda",
+    "fixture_only": false,
+    "comparisons": [
+      {
+        "path": "split3",
+        "bitwise_equal": true,
+        "tensor_fields_compared": 885
+      },
+      {
+        "path": "split4",
+        "bitwise_equal": true,
+        "tensor_fields_compared": 885
+      }
+    ],
+    "total_updates": 8,
+    "interrupt_after": [
+      3,
+      4
+    ],
+    "comparison_scope": "model parameters/BN/fixed buffers; Adam moments/steps; scheduler; all RNG; next sampler state; loss/input hashes; early-stop counters; validation history",
+    "limitations": "Same-machine deterministic CUDA/CPU result, not cross-hardware bitwise reproducibility."
+  }
+}

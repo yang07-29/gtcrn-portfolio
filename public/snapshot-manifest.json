@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "description": "Approved public snapshot copied byte-for-byte; scientific records are immutable.",
+  "exportedAt": "2026-11-11T03:33:41.325Z",
+  "sourceCommit": "04dd38f93332d2ede5a32be5183f5c48587ef117",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audio/ATTRIBUTION.md",
+      "bytes": 2392,
+      "sha256": "efd1652caa51dfad3d68d06bb0f6e7890a2c84710a1cdb2a2547ef14477ecd0c"
+    },
+    {
+      "path": "audio/clean-control-enhanced.wav",
+      "bytes": 128044,
+      "sha256": "f9913d1d7006bf6c83136344546380d274425a22d5a7b39e47ba8e4fd324d725"
+    },
+    {
+      "path": "audio/clean-control-input.wav",
+      "bytes": 128044,
+      "sha256": "86d99c38ca1ebf94afd5c4c9a423f6eb581c60adc913639663a4f784adb43798"
+    },
+    {
+      "path": "audio/clean-control-reference.wav",
+      "bytes": 128044,
+      "sha256": "86d99c38ca1ebf94afd5c4c9a423f6eb581c60adc913639663a4f784adb43798"
+    },
+    {
+      "path": "audio/fan-strong-enhanced.wav",
+      "bytes": 128044,
+      "sha256": "39e6cd015858ad00b772869e48bbc90315303e05bf550fbf6d80fb17a0701a9a"
+    },
+    {
+      "path": "audio/fan-strong-input.wav",
+      "bytes": 128044,
+      "sha256": "0b4bb92fb19bcaa36658680972c1b5b40e894e683d53d453e1f5152d74d38e37"
+    },
+    {
+      "path": "audio/fan-strong-reference.wav",
+      "bytes": 128044,
+      "sha256": "86d99c38ca1ebf94afd5c4c9a423f6eb581c60adc913639663a4f784adb43798"
+    },
+    {
+      "path": "audio/keyboard-strong-enhanced.wav",
+      "bytes": 128044,
+      "sha256": "3028909e1abf2715c0a970219f64e013738e97703a55140ce4de20c114e016e4"
+    },
+    {
+      "path": "audio/keyboard-strong-input.wav",
+      "bytes": 128044,
+      "sha256": "47ec3d301ef15acf82b7eab50b9d3fd24396bf397930923400699f45dfd73f05"
+    },
+    {
+      "path": "audio/keyboard-strong-reference.wav",
+      "bytes": 128044,
+      "sha256": "86d99c38ca1ebf94afd5c4c9a423f6eb581c60adc913639663a4f784adb43798"
+    },
+    {
+      "path": "data/cases/clean-control.json",
+      "bytes": 1316273,
+      "sha256": "1cec8715231a81088cdd10c05a585ee26ae3d2803a214d62c20327c370d49da4"
+    },
+    {
+      "path": "data/cases/fan-strong.json",
+      "bytes": 1284539,
+      "sha256": "d4c1f73020b21f0ee772241aa390367015a874bcb420328d900f9994bbfa8045"
+    },
+    {
+      "path": "data/cases/keyboard-strong.json",
+      "bytes": 1286830,
+      "sha256": "d37a97e2b8166c37c9d4acb2989223d3bd971d505ab3262806fc39a7a08dde21"
+    },
+    {
+      "path": "data/evidence/cli-reproducibility.json",
+      "bytes": 624,
+      "sha256": "78337e48588b74550c6437794a635a9f18130e8baa0004f2bac819eebcf6b3e8"
+    },
+    {
+      "path": "data/evidence/desktop-playback-mock.json",
+      "bytes": 1302,
+      "sha256": "5b97d52c2c8ac22ee0dd5532ac30eb65e2bd616cedb078e8c5387e2bad7a7d84"
+    },
+    {
+      "path": "data/evidence/dnsmos-v1.json",
+      "bytes": 1157,
+      "sha256": "6cfbf5e50ce9706cb74ff1b97349049a7590f4b851c067479f8693158c98b941"
+    },
+    {
+      "path": "data/evidence/dnsmos-v2.json",
+      "bytes": 753,
+      "sha256": "ec62ce203e94bed8d5cb5983cbd560030d5fd0e11a5bce0c7770ff47ecf24219"
+    },
+    {
+      "path": "data/evidence/external-keyboard-protocol.json",
+      "bytes": 7620,
+      "sha256": "a30c1568c96d52569213dada2461eaade8d24a89ff04c2174fb9d8dd60290e24"
+    },
+    {
+      "path": "data/evidence/external-keyboard-results.json",
+      "bytes": 6899,
+      "sha256": "5ee8cdba849aae7bca606dc1fdcf2157ba6c6da63389864879aadcf9613e8c8e"
+    },
+    {
+      "path": "data/evidence/external-noise-acceptance.json",
+      "bytes": 2522,
+      "sha256": "3de41fb92f1cd10c9b647b7dd46b500ddce35de5e453a5a1db5d94634aa544a4"
+    },
+    {
+      "path": "data/evidence/external-noise-summary.json",
+      "bytes": 34388,
+      "sha256": "b80551d85c300b8a25318bf5e04dd14e018ee58b027ab893a40aa724679f0a58"
+    },
+    {
+      "path": "data/evidence/noise-strength-42.json",
+      "bytes": 10050,
+      "sha256": "34c470cad53dfca59000717b79bdc2d63f39690dd14c21496d3d83e0136a3082"
+    },
+    {
+      "path": "data/evidence/portable-equivalence.json",
+      "bytes": 1312,
+      "sha256": "26a040ea0338d0869d2cf1c8db001d00c980df5391ce74d13d036c2dcd537b60"
+    },
+    {
+      "path": "data/evidence/portable-long.json",
+      "bytes": 1733,
+      "sha256": "34232d0b70ad55ba0e69e9384f47fdd19146744231c860239b20e9b15afef6a3"
+    },
+    {
+      "path": "data/evidence/resume-voicebank.json",
+      "bytes": 1050,
+      "sha256": "568dbb22bd77c015d625b3d99aed216dd5ba037aaf2a572e81584a731f1aeeb9"
+    },
+    {
+      "path": "data/evidence/seed17-clean_only-freeze.json",
+      "bytes": 6365,
+      "sha256": "5532562fecf2ff46218d4eb9aa2546ee96702664f070bd823b6ef95009d40bd4"
+    },
+    {
+      "path": "data/evidence/seed17-clean_only.json",
+      "bytes": 11776,
+      "sha256": "01e23089fb922673b99ebdbf1d91c1d91cf3bed81063efa4fba29773ba26a121"
+    },
+    {
+      "path": "data/evidence/seed17-controlled_target-freeze.json",
+      "bytes": 6384,
+      "sha256": "392c7809d95eb6b0683bc22accefa8e6655aad7e421a774d7b1e1276d07a0a44"
+    },
+    {
+      "path": "data/evidence/seed17-controlled_target.json",
+      "bytes": 15625,
+      "sha256": "6229ec495244a691e6c15d317add01b6f3df8e29f0e76a449b9ecc7ecf06fe5e"
+    },
+    {
+      "path": "data/evidence/seed17-official_full-freeze.json",
+      "bytes": 6371,
+      "sha256": "4b86d6bdfc65c9c74f502e2398ef9a886e206bf0cbf406b9a08fa5fd4ad4258a"
+    },
+    {
+      "path": "data/evidence/seed17-official_full.json",
+      "bytes": 11884,
+      "sha256": "92f32819cfb80acd15a8ec66c7fc63a794412ffc26558fe84048c08f268419a1"
+    },
+    {
+      "path": "data/evidence/seed17-supplemental-freeze.json",
+      "bytes": 6380,
+      "sha256": "36eee2df00a24a9b3f7670006b085c5e643670539a6ea355ae5bdc5f65addd3b"
+    },
+    {
+      "path": "data/evidence/seed17-supplemental.json",
+      "bytes": 23531,
+      "sha256": "b516c81965222cea3a5c7b2b91e67599fea83879f6b159aad979a353a4d6b346"
+    },
+    {
+      "path": "data/evidence/studio-delivery.json",
+      "bytes": 2005,
+      "sha256": "f57b6b29d13bf3def8c5a80cdd9e62b77f347c7628798bdd2ca76981abe7cb80"
+    },
+    {
+      "path": "data/evidence/three-seed-acceptance.json",
+      "bytes": 3121,
+      "sha256": "1e199af0b54c8c563bc0d33973193f29de206a4fd286156a6a92a8bfa3b4d78a"
+    },
+    {
+      "path": "data/evidence/three-seed-summary.json",
+      "bytes": 14381,
+      "sha256": "50b0aa49d3ea507f5f1b4aae9ee93177d886ec19c0cfe5f466dd43cd1343f6d5"
+    },
+    {
+      "path": "data/evidence.json",
+      "bytes": 256061,
+      "sha256": "87decb4f14f762c223e90a04ae5c0c3ed35f1242942a33d6483fdfe54965b5f5"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 712,
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7"
+    }
+  ]
+}

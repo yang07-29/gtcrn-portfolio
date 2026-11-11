@@ -1,0 +1,29 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "reports/evaluations/dnsmos_auxiliary_seed17_v1/summary.json",
+  "sourceSha256": "9d8eee6529bd52f21ba2fcfb9a332bd59db087318f502864dc19fa2df2669dd1",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-18T14:20:33.892813+00:00",
+    "status": "blocked_repeated_error",
+    "attempted": 2,
+    "planned": 619,
+    "failed": 2,
+    "failures": [
+      {
+        "example_id": "p232_001",
+        "suite": "official_full",
+        "method": "E0",
+        "reason": "ImportError: Numba needs NumPy 2.3 or less. Got NumPy 2.4."
+      },
+      {
+        "example_id": "p232_001",
+        "suite": "official_full",
+        "method": "E1",
+        "reason": "ImportError: Numba needs NumPy 2.3 or less. Got NumPy 2.4."
+      }
+    ],
+    "scope": "Auxiliary fixed small subset, not full test quality or listener scores; repeated short-audio windows are not independent samples.",
+    "reference_free_demo": "No SI-SDR/STOI/PESQ reference metrics; unknown recording provenance and no listening judgment"
+  }
+}

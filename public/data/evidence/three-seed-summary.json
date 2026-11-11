@@ -1,0 +1,445 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "replications/reports/three_seed_summary.json",
+  "sourceSha256": "cd7a64e28a6e6872075d5a396575dd99311b8a62d227f3d109f835bf543ef76d",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-19T15:24:57.691803+00:00",
+    "status": "completed",
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "rows": [
+      {
+        "suite": "official_full",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": -0.29308465488623764,
+          "29": -0.1829712545570659,
+          "43": -0.23971162341135516
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": -0.23858917761821957,
+        "sample_sd_ddof1": 0.05506528077138993,
+        "minimum": -0.29308465488623764,
+        "maximum": -0.1829712545570659,
+        "positive_seeds": 0,
+        "negative_seeds": 3,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "official_full",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": -0.00400716180699218,
+          "29": -0.0021316826851268122,
+          "43": -0.0020167897066524594
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": -0.0027185447329238174,
+        "sample_sd_ddof1": 0.0011174527156936254,
+        "minimum": -0.00400716180699218,
+        "maximum": -0.0020167897066524594,
+        "positive_seeds": 0,
+        "negative_seeds": 3,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "official_full",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 0.09188205182770161,
+          "29": 0.09344556173399496,
+          "43": 0.06025960810221791
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 0.08186240722130482,
+        "sample_sd_ddof1": 0.01872489888200965,
+        "minimum": 0.06025960810221791,
+        "maximum": 0.09344556173399496,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "official_full",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 1.3319202172799847e-07,
+          "29": 5.80790823719372e-05,
+          "43": -4.311529673172144e-05
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 5.032325887314585e-06,
+        "sample_sd_ddof1": 5.077476464759289e-05,
+        "minimum": -4.311529673172144e-05,
+        "maximum": 5.80790823719372e-05,
+        "positive_seeds": 2,
+        "negative_seeds": 1,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "clean_only",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 2.7025093576914236,
+          "29": 3.189179773357623,
+          "43": 3.1335423202531714
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 3.008410483767406,
+        "sample_sd_ddof1": 0.26637474682841666,
+        "minimum": 2.7025093576914236,
+        "maximum": 3.189179773357623,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "clean_only",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": -0.004861460464709012,
+          "29": -0.0039354293314310534,
+          "43": -0.0013561596272888014
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": -0.003384349807809622,
+        "sample_sd_ddof1": 0.0018164663418904368,
+        "minimum": -0.004861460464709012,
+        "maximum": -0.0013561596272888014,
+        "positive_seeds": 0,
+        "negative_seeds": 3,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "clean_only",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 1.8637617303356686,
+          "29": 3.080943380965941,
+          "43": 1.7592451907600186
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 2.2346501006872095,
+        "sample_sd_ddof1": 0.7347721850648123,
+        "minimum": 1.7592451907600186,
+        "maximum": 3.080943380965941,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "clean_only",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 824,
+        "common_valid_examples": 824,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 824,
+          "29": 824,
+          "43": 824
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": -0.0012455794475599454,
+          "29": 0.0002468433504337898,
+          "43": -4.23984499494729e-05
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": -0.0003470448490252095,
+        "sample_sd_ddof1": 0.0007914786941827442,
+        "minimum": -0.0012455794475599454,
+        "maximum": 0.0002468433504337898,
+        "positive_seeds": 1,
+        "negative_seeds": 2,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "controlled_target",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 6592,
+        "common_valid_examples": 6592,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 6592,
+          "29": 6592,
+          "43": 6592
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 6.641419928187817,
+          "29": 5.888953468367189,
+          "43": 5.898486599204599
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 6.142953331919869,
+        "sample_sd_ddof1": 0.43171105017373185,
+        "minimum": 5.888953468367189,
+        "maximum": 6.641419928187817,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "controlled_target",
+        "kind": "paired",
+        "method_or_comparison": "E4-E3c",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 6592,
+        "common_valid_examples": 6592,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 6592,
+          "29": 6592,
+          "43": 6592
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 0.05816170366416731,
+          "29": 0.05557942911235873,
+          "43": 0.053379561824532976
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 0.055706898200353,
+        "sample_sd_ddof1": 0.0023936178516820255,
+        "minimum": 0.053379561824532976,
+        "maximum": 0.05816170366416731,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "controlled_target",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "si_sdr_db",
+        "group_examples": 6592,
+        "common_valid_examples": 6592,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 6592,
+          "29": 6592,
+          "43": 6592
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 0.160852708413521,
+          "29": 0.04974192343898419,
+          "43": 0.3191792714222203
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 0.17659130109157517,
+        "sample_sd_ddof1": 0.13540642007184941,
+        "minimum": 0.04974192343898419,
+        "maximum": 0.3191792714222203,
+        "positive_seeds": 3,
+        "negative_seeds": 0,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      },
+      {
+        "suite": "controlled_target",
+        "kind": "paired",
+        "method_or_comparison": "E4-E5",
+        "group": "all",
+        "metric": "stoi",
+        "group_examples": 6592,
+        "common_valid_examples": 6592,
+        "common_valid_fraction": 1.0,
+        "per_seed_original_valid_counts": {
+          "17": 6592,
+          "29": 6592,
+          "43": 6592
+        },
+        "per_seed_excluded_from_original_valid": {
+          "17": 0,
+          "29": 0,
+          "43": 0
+        },
+        "per_seed_mean_on_common_support": {
+          "17": 0.0006016096293415097,
+          "29": -0.0008455978507108759,
+          "43": 0.0027206321940893116
+        },
+        "status": "computed_descriptive",
+        "n_seeds": 3,
+        "mean": 0.0008255479909066484,
+        "sample_sd_ddof1": 0.0017936305292462675,
+        "minimum": -0.0008455978507108759,
+        "maximum": 0.0027206321940893116,
+        "positive_seeds": 2,
+        "negative_seeds": 1,
+        "coverage_status": "sufficient_for_descriptive_summary",
+        "support_scope": "same valid examples in every seed"
+      }
+    ],
+    "statistical_unit": "three independently initialized training seeds, not number of remixed examples",
+    "limitations": [
+      "three seeds only",
+      "same limited noise sources",
+      "fixed already-seen tests, no tuning",
+      "no significance claim",
+      "no additional deployment claim"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "portable/reports/studio_delivery_20261026.json",
+  "sourceSha256": "72b0e36fd73f199a5c833b506ca94ff750b3bb564825b22ced50a1ba64a64ed0",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "status": "passed",
+    "utc": "2026-10-25T19:34:35.889253+00:00",
+    "python_tests": {
+      "status": "passed",
+      "count": 45,
+      "seconds": 10.811
+    },
+    "studio_http": {
+      "status": "passed",
+      "checks": 14,
+      "real_reference_audio_seconds": 10,
+      "real_no_reference_audio_seconds": 60,
+      "real_process_restart_and_history_recovery": true,
+      "source_reference_model_bytes_unchanged": true,
+      "temporary_results_only": true
+    },
+    "studio_launcher": {
+      "status": "passed",
+      "instance_reused": true,
+      "static_assets": [
+        "index.html",
+        "app.js",
+        "style.css"
+      ],
+      "omitted_teaching_audio": [
+        "教学音频未随当前项目复制；数值表可读，试听不可用。"
+      ]
+    },
+    "legacy_tk": {
+      "status": "passed",
+      "real_gallery_runs": 180,
+      "filter_combinations": 112,
+      "torch_imported": false
+    },
+    "node_frontend_logic": {
+      "status": "passed",
+      "checks": 10,
+      "report": ".cache/deliveries/studio-independent-20261026-frontend.json",
+      "scope": "Node VM with minimal DOM and audio event simulation; not a rendered browser or device playback test",
+      "node_is_runtime_requirement": false
+    },
+    "not_verified": [
+      "Rendered browser appearance and browser interaction",
+      "Physical speaker/headphone playback",
+      "Live microphone or headset-chip deployment"
+    ],
+    "scope": "Post-package acceptance receipt; deliberately outside the archive to avoid self-referential packaging. Full command and installation logs stay in the local independent-environment report."
+  }
+}

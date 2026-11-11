@@ -1,0 +1,154 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "external_cases/keyboard_public_v1/results.json",
+  "sourceSha256": "8fbb00db7d3be821a1c4997b3495c34987f04b34b4c4c422c61db770f57ac9af",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-20T01:23:26.737559+00:00",
+    "status": "passed",
+    "seed": 17,
+    "methods": {
+      "E0": {
+        "metrics": {
+          "si_sdr_db": -0.019589800512645597,
+          "mse": 0.0015139322505325786,
+          "gain_sensitive_sdr_db": -4.199346695191449e-09,
+          "rms_gain_db": 3.0004819024853226,
+          "projection_gain": 0.9977418624389603,
+          "stoi": 0.696794355966219,
+          "metric_flags": [],
+          "pesq": null,
+          "pesq_status": "not installed; optional metric not fabricated"
+        },
+        "statistics": {
+          "samples": 160000,
+          "peak_abs": 0.9500000476837158,
+          "rms": 0.05496387145251231,
+          "mean": 8.032986079342663e-05,
+          "fraction_abs_ge_1": 0.0
+        },
+        "path": "external_cases/keyboard_public_v1/artifacts/audio/E0_float.wav",
+        "sha256": "51ef0c954966ee856278c30544fbe77648d543c0057a098630a76dda09f1569a",
+        "sample_sha256": "32d29d6eb05ed7afca3ea5127c6a04d960d3de6935a671bce5fab09f24e9b5b4"
+      },
+      "E4": {
+        "metrics": {
+          "si_sdr_db": 7.880263300956841,
+          "mse": 0.00021232333981466853,
+          "gain_sensitive_sdr_db": 8.5310870325234,
+          "rms_gain_db": -0.7712362773284352,
+          "projection_gain": 0.8485223197552574,
+          "stoi": 0.7860323600649398,
+          "metric_flags": [],
+          "pesq": null,
+          "pesq_status": "not installed; optional metric not fabricated"
+        },
+        "statistics": {
+          "samples": 160000,
+          "peak_abs": 0.2810439467430115,
+          "rms": 0.03560339448156742,
+          "mean": 1.0857856068469118e-05,
+          "fraction_abs_ge_1": 0.0
+        },
+        "path": "external_cases/keyboard_public_v1/artifacts/audio/E4_float.wav",
+        "sha256": "07698aa9a5f1c489fd066b36f6ed5c34711d7054a95cf29a0268bf4033ce1a2f",
+        "sample_sha256": "2167f92a98c43082030716dae42e8465207dcea8abd542aaa55b565ec7c4c20d"
+      },
+      "E3c": {
+        "metrics": {
+          "si_sdr_db": 3.673371303756439,
+          "mse": 0.0004650713398139716,
+          "gain_sensitive_sdr_db": 5.125868634293865,
+          "rms_gain_db": -0.729445838176833,
+          "projection_gain": 0.7690962108532998,
+          "stoi": 0.6841922749655731,
+          "metric_flags": [],
+          "pesq": null,
+          "pesq_status": "not installed; optional metric not fabricated"
+        },
+        "statistics": {
+          "samples": 160000,
+          "peak_abs": 0.27205953001976013,
+          "rms": 0.03577510591514685,
+          "mean": 1.2428489753801841e-05,
+          "fraction_abs_ge_1": 0.0
+        },
+        "path": "external_cases/keyboard_public_v1/artifacts/audio/E3c_float.wav",
+        "sha256": "0a99672d32c6a726383c066c8b16064a93e9601c445941c25adfef1d1f18eb70",
+        "sample_sha256": "9afaff34ae4cc80ba286e2744b9528e6b5b61afb14ae0b36ba64d4fe335610f1"
+      },
+      "E4_ONNX": {
+        "metrics": {
+          "si_sdr_db": 7.880262955119569,
+          "mse": 0.00021232335229806138,
+          "gain_sensitive_sdr_db": 8.531086777183198,
+          "rms_gain_db": -0.7712358052709869,
+          "projection_gain": 0.8485223611371925,
+          "stoi": 0.7860323403443641,
+          "metric_flags": [],
+          "pesq": null,
+          "pesq_status": "not installed; optional metric not fabricated"
+        },
+        "statistics": {
+          "samples": 160000,
+          "peak_abs": 0.28104397654533386,
+          "rms": 0.0356033964165273,
+          "mean": 1.0857868801394943e-05,
+          "fraction_abs_ge_1": 0.0
+        },
+        "path": "external_cases/keyboard_public_v1/artifacts/audio/E4_ONNX_float.wav",
+        "sha256": "eb7d52c00f67002858bd95e0e6ed705cdd94165a5f565a2fea65c3dcee3c9c76",
+        "sample_sha256": "b051254ce19c36fe52832dab43e05c75bd7f56638a2a09aaba371b494f2151bb"
+      }
+    },
+    "comparisons": {
+      "E4-E3c": {
+        "si_sdr_db": 4.206891997200402,
+        "stoi": 0.1018400850993667,
+        "gain_sensitive_sdr_db": 3.405218398229535,
+        "mse": -0.0002527479999993031,
+        "rms_gain_db": -0.0417904391516023,
+        "projection_gain": 0.07942610890195756
+      },
+      "E4-E0": {
+        "si_sdr_db": 7.899853101469486,
+        "stoi": 0.08923800409872085,
+        "gain_sensitive_sdr_db": 8.531087036722747,
+        "mse": -0.00130160891071791,
+        "rms_gain_db": -3.771718179813758,
+        "projection_gain": -0.14921954268370297
+      },
+      "E3c-E0": {
+        "si_sdr_db": 3.692961104269085,
+        "stoi": -0.01260208100064586,
+        "gain_sensitive_sdr_db": 5.125868638493212,
+        "mse": -0.0010488609107186068,
+        "rms_gain_db": -3.7299277406621556,
+        "projection_gain": -0.22864565158566053
+      },
+      "E4_ONNX-E4": {
+        "si_sdr_db": -3.4583727170911516e-07,
+        "stoi": -1.972057572796615e-08,
+        "gain_sensitive_sdr_db": -2.5534020231532395e-07,
+        "mse": 1.2483392845905744e-11,
+        "rms_gain_db": 4.7205744835299157e-07,
+        "projection_gain": 4.13819351008371e-08
+      }
+    },
+    "equivalence_errors": {
+      "E4_stream_vs_offline_maxabs": 1.6763806343078613e-07,
+      "E3c_stream_vs_offline_maxabs": 1.341104507446289e-07,
+      "E4_ONNX_vs_E4_Torch_stream_maxabs": 1.564621925354004e-07
+    },
+    "threshold_maxabs": 0.0001,
+    "limitations": [
+      "Audit excludes all 14 registered additional noise recording IDs and 12 creator accounts, original official demo, and all registered VoiceBank source-file hashes.",
+      "VoiceBank source metadata uses anonymous speaker IDs and lacks original noise recording IDs. Different platforms/accounts and file hashes do not prove different natural persons or rule out transformed reposts.",
+      "Both new source pages describe own work. Neither source is included in this project's recorded training/validation/test manifests; unknown physical identity or undocumented upstream overlap cannot be categorically excluded.",
+      "No E2 official pretrained model is run; its full training sources are unknown.",
+      "One 10-second synthetic mixture from one external keyboard recording and one public speech recording; no confidence interval, significance, or population generalization claim",
+      "Own work; reading of Edgar Allan Poe's 1849 poem. Reference recording may contain residual room or microphone noise; not asserted anechoic or noise-free."
+    ],
+    "human_listening_and_understanding": "not assessed"
+  }
+}

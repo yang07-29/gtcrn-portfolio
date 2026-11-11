@@ -1,0 +1,28 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "portable/reports/portable_acceptance_v1.json",
+  "sourceSha256": "8c32299ab738d095d0e87f758000f0fc41b33f0ba585116235e156b892b8a830",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-23T17:31:23.493264+00:00",
+    "status": "passed",
+    "model_sha256": "356bb3c94765b354138a40c9c09e0de7d39684c76e2b43a706c509e8ecb5ab03",
+    "checkpoint_sha256": "c4475ed04a3678546bb88cb70434ca6c72179844521116386196c3e875b3a46b",
+    "threshold_maxabs": 0.0001,
+    "numerical_case_count": 192,
+    "numerical_maxabs": 5.133450031280518e-06,
+    "real_audio": {
+      "source": "artifacts/upstream/test_wavs/mix.wav",
+      "sha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+      "samples": 156302,
+      "maxabs_vs_torch_offline": 3.2782554626464844e-07,
+      "maxabs_vs_old_torch_dsp_onnx_network": 1.6763806343078613e-07
+    },
+    "limits": [
+      "No physical soundcard/chip test",
+      "NumPy sqrt-Hann/FFT is mathematically equivalent but not bitwise identical to Torch",
+      "Runtime is Torch-free; this validation process imports Torch only for comparisons",
+      "One fixed E4 seed17 model, 16kHz mono CPU FP32"
+    ]
+  }
+}

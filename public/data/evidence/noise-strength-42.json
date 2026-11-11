@@ -1,0 +1,258 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "portable/reports/noise_strength_teaching_20261024.json",
+  "sourceSha256": "d214b9b2e77f43a621ed8697a2d766060fdf0cbfc534927c9e3fca0077c6f319",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "schema_version": 1,
+    "utc": "2026-10-24T09:12:08.577664+00:00",
+    "scope": "Fixed-material teaching comparison, one source per noise class and two 4-second utterances, one model. Previously used evaluation materials; not a new blind test or a class-level performance estimate.",
+    "checks": {
+      "completed_runs": 42,
+      "mixed_runs": 40,
+      "clean_controls": 2,
+      "all_reference_hashes_identical_per_speaker": true,
+      "all_lengths_equal_64000": true,
+      "all_component_snrs_within_1e_4_db": true,
+      "model_sha256_verified_each_run": true,
+      "torch_imported": false,
+      "actual_device_listening": false
+    },
+    "improvement_counts": {
+      "si_sdr_positive": 37,
+      "gain_sensitive_sdr_positive": 40,
+      "mixed_total": 40
+    },
+    "aggregates": [
+      {
+        "noise_key": "keyboard",
+        "noise_label": "键盘",
+        "snr_db": -5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -5.058013509658961,
+        "mean_enhanced_si_sdr_db": 6.977127102908212,
+        "mean_delta_si_sdr_db": 12.035140612567172,
+        "mean_enhanced_gain_sensitive_sdr_db": 7.74555661661379,
+        "mean_delta_gain_sensitive_sdr_db": 12.745556613661986
+      },
+      {
+        "noise_key": "keyboard",
+        "noise_label": "键盘",
+        "snr_db": 0,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -0.032534771569051234,
+        "mean_enhanced_si_sdr_db": 9.78445749808436,
+        "mean_delta_si_sdr_db": 9.81699226965341,
+        "mean_enhanced_gain_sensitive_sdr_db": 10.184331321263615,
+        "mean_delta_gain_sensitive_sdr_db": 10.184331320119352
+      },
+      {
+        "noise_key": "keyboard",
+        "noise_label": "键盘",
+        "snr_db": 5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 4.981754777399367,
+        "mean_enhanced_si_sdr_db": 12.265573852886199,
+        "mean_delta_si_sdr_db": 7.283819075486833,
+        "mean_enhanced_gain_sensitive_sdr_db": 12.4672236780849,
+        "mean_delta_gain_sensitive_sdr_db": 7.467223688027807
+      },
+      {
+        "noise_key": "keyboard",
+        "noise_label": "键盘",
+        "snr_db": 10,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 9.98977837922578,
+        "mean_enhanced_si_sdr_db": 14.922366726564933,
+        "mean_delta_si_sdr_db": 4.932588347339152,
+        "mean_enhanced_gain_sensitive_sdr_db": 14.985049181220504,
+        "mean_delta_gain_sensitive_sdr_db": 4.985049178459984
+      },
+      {
+        "noise_key": "fan",
+        "noise_label": "风扇",
+        "snr_db": -5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -5.163521921970419,
+        "mean_enhanced_si_sdr_db": -7.022513603735782,
+        "mean_delta_si_sdr_db": -1.8589916817653633,
+        "mean_enhanced_gain_sensitive_sdr_db": -2.9214160051894975,
+        "mean_delta_gain_sensitive_sdr_db": 2.078583991803884
+      },
+      {
+        "noise_key": "fan",
+        "noise_label": "风扇",
+        "snr_db": 0,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -0.090743756150602,
+        "mean_enhanced_si_sdr_db": 0.24218215561360662,
+        "mean_delta_si_sdr_db": 0.3329259117642086,
+        "mean_enhanced_gain_sensitive_sdr_db": 1.8355554395961322,
+        "mean_delta_gain_sensitive_sdr_db": 1.835555436001317
+      },
+      {
+        "noise_key": "fan",
+        "noise_label": "风扇",
+        "snr_db": 5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 4.949826833291327,
+        "mean_enhanced_si_sdr_db": 6.33911719211687,
+        "mean_delta_si_sdr_db": 1.389290358825543,
+        "mean_enhanced_gain_sensitive_sdr_db": 6.962800621520548,
+        "mean_delta_gain_sensitive_sdr_db": 1.9628006161415374
+      },
+      {
+        "noise_key": "fan",
+        "noise_label": "风扇",
+        "snr_db": 10,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 9.972530653257209,
+        "mean_enhanced_si_sdr_db": 11.816915791420625,
+        "mean_delta_si_sdr_db": 1.8443851381634158,
+        "mean_enhanced_gain_sensitive_sdr_db": 12.077906751389309,
+        "mean_delta_gain_sensitive_sdr_db": 2.077906745957173
+      },
+      {
+        "noise_key": "road_traffic",
+        "noise_label": "道路交通",
+        "snr_db": -5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -5.0611008503759525,
+        "mean_enhanced_si_sdr_db": -2.0780081934750547,
+        "mean_delta_si_sdr_db": 2.9830926569008978,
+        "mean_enhanced_gain_sensitive_sdr_db": 2.048516492220418,
+        "mean_delta_gain_sensitive_sdr_db": 7.048516491817036
+      },
+      {
+        "noise_key": "road_traffic",
+        "noise_label": "道路交通",
+        "snr_db": 0,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -0.03418928023488838,
+        "mean_enhanced_si_sdr_db": 5.906036493802009,
+        "mean_delta_si_sdr_db": 5.9402257740368976,
+        "mean_enhanced_gain_sensitive_sdr_db": 6.8038156634381295,
+        "mean_delta_gain_sensitive_sdr_db": 6.803815662224495
+      },
+      {
+        "noise_key": "road_traffic",
+        "noise_label": "道路交通",
+        "snr_db": 5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 4.980895785751472,
+        "mean_enhanced_si_sdr_db": 10.342047077222785,
+        "mean_delta_si_sdr_db": 5.361151291471313,
+        "mean_enhanced_gain_sensitive_sdr_db": 10.644698766394644,
+        "mean_delta_gain_sensitive_sdr_db": 5.644698761794393
+      },
+      {
+        "noise_key": "road_traffic",
+        "noise_label": "道路交通",
+        "snr_db": 10,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 9.989363520528556,
+        "mean_enhanced_si_sdr_db": 14.060488183375124,
+        "mean_delta_si_sdr_db": 4.071124662846568,
+        "mean_enhanced_gain_sensitive_sdr_db": 14.159800818490147,
+        "mean_delta_gain_sensitive_sdr_db": 4.159800813031273
+      },
+      {
+        "noise_key": "engine",
+        "noise_label": "发动机",
+        "snr_db": -5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -4.99006106238194,
+        "mean_enhanced_si_sdr_db": 7.550036863276319,
+        "mean_delta_si_sdr_db": 12.54009792565826,
+        "mean_enhanced_gain_sensitive_sdr_db": 8.209668445203311,
+        "mean_delta_gain_sensitive_sdr_db": 13.209668444095785
+      },
+      {
+        "noise_key": "engine",
+        "noise_label": "发动机",
+        "snr_db": 0,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 0.005744742966255208,
+        "mean_enhanced_si_sdr_db": 11.641090013477138,
+        "mean_delta_si_sdr_db": 11.635345270510882,
+        "mean_enhanced_gain_sensitive_sdr_db": 11.867623891853839,
+        "mean_delta_gain_sensitive_sdr_db": 11.867623891146263
+      },
+      {
+        "noise_key": "engine",
+        "noise_label": "发动机",
+        "snr_db": 5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 5.0033208345416185,
+        "mean_enhanced_si_sdr_db": 14.122935513847263,
+        "mean_delta_si_sdr_db": 9.119614679305645,
+        "mean_enhanced_gain_sensitive_sdr_db": 14.23034076493248,
+        "mean_delta_gain_sensitive_sdr_db": 9.230340764316136
+      },
+      {
+        "noise_key": "engine",
+        "noise_label": "发动机",
+        "snr_db": 10,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 10.001937063377941,
+        "mean_enhanced_si_sdr_db": 15.382439361313898,
+        "mean_delta_si_sdr_db": 5.380502297935957,
+        "mean_enhanced_gain_sensitive_sdr_db": 15.47616096962248,
+        "mean_delta_gain_sensitive_sdr_db": 5.476160974828674
+      },
+      {
+        "noise_key": "wind",
+        "noise_label": "环境风雨",
+        "snr_db": -5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -5.1700256211351885,
+        "mean_enhanced_si_sdr_db": 2.0024840456511517,
+        "mean_delta_si_sdr_db": 7.17250966678634,
+        "mean_enhanced_gain_sensitive_sdr_db": 4.162096884311152,
+        "mean_delta_gain_sensitive_sdr_db": 9.16209688295163
+      },
+      {
+        "noise_key": "wind",
+        "noise_label": "环境风雨",
+        "snr_db": 0,
+        "utterances": 2,
+        "mean_input_si_sdr_db": -0.0945003295798886,
+        "mean_enhanced_si_sdr_db": 5.936516233855408,
+        "mean_delta_si_sdr_db": 6.031016563435297,
+        "mean_enhanced_gain_sensitive_sdr_db": 6.939157421376282,
+        "mean_delta_gain_sensitive_sdr_db": 6.939157416825434
+      },
+      {
+        "noise_key": "wind",
+        "noise_label": "环境风雨",
+        "snr_db": 5,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 4.947481202709788,
+        "mean_enhanced_si_sdr_db": 9.658060518604259,
+        "mean_delta_si_sdr_db": 4.710579315894469,
+        "mean_enhanced_gain_sensitive_sdr_db": 10.009079727758792,
+        "mean_delta_gain_sensitive_sdr_db": 5.009079724771875
+      },
+      {
+        "noise_key": "wind",
+        "noise_label": "环境风雨",
+        "snr_db": 10,
+        "utterances": 2,
+        "mean_input_si_sdr_db": 9.970937410663165,
+        "mean_enhanced_si_sdr_db": 12.41550224031671,
+        "mean_delta_si_sdr_db": 2.4445648296535447,
+        "mean_enhanced_gain_sensitive_sdr_db": 12.551414519329208,
+        "mean_delta_gain_sensitive_sdr_db": 2.5514145190883237
+      }
+    ],
+    "independent_audit": {
+      "wav_files_checked": 294,
+      "max_metric_error_db": 7.11e-15,
+      "max_component_snr_error_db": 1.62e-08,
+      "max_mixture_reconstruction_error": 2.59e-08,
+      "same_reference_per_speaker": true,
+      "all_sequences_checked": 42,
+      "actual_device_listening": false
+    }
+  }
+}

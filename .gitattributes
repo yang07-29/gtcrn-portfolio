@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# These are frozen evidence bytes, including JSON/Markdown, not normalized text.
+public/** -text
+*.wav binary

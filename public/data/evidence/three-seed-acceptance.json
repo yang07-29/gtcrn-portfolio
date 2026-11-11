@@ -1,0 +1,57 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "replications/reports/final_acceptance_v1.json",
+  "sourceSha256": "293ad1afb3a7232ccbacdc19b4f8fbc1700320685696bce5d02f2880197a702f",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "status": "passed",
+    "utc": "2026-10-19T15:35:37.330414+00:00",
+    "scope": "Completed three-seed descriptive replication; original seed17 deployment preserved",
+    "training_seeds": [
+      17,
+      29,
+      43
+    ],
+    "original_protected_files": 252,
+    "frozen_snapshot_files_per_new_seed": 102,
+    "aggregate_evidence_hashes": 129,
+    "statistics_rows_verified": 3240,
+    "unit_tests_passed": 13,
+    "independent_review": {
+      "raw_records": 54384,
+      "paired_primary_groups": 360,
+      "method": "Independent math.fsum over raw paired differences, seed means, then sample SD ddof=1",
+      "max_numeric_difference_approx": 1.33e-14,
+      "primary_common_valid_coverage": 1.0,
+      "html_numeric_negative_cells_retained": 504,
+      "guardrails_recomputed": 18,
+      "guardrails_passed": 18,
+      "html_original_text_and_22_audio_2_images_preserved": true,
+      "html_fragment_links_valid": 15,
+      "html_validation_method": "Read-only parsing, hash, embedded-resource and numeric checks; no browser screenshot claim"
+    },
+    "resume_scope": "882 tensor fields per branch refers to an 8-update gate, not a reload test of each production 5000-update terminal checkpoint",
+    "limitations": [
+      "three seeds only",
+      "same limited noise sources",
+      "fixed already-seen tests, no tuning",
+      "no significance claim",
+      "no additional deployment claim",
+      "All three official E4-E3c SI-SDR and STOI means are negative despite passing project tolerances",
+      "All three clean E4-E3c STOI means are negative",
+      "Target E4-E5 STOI is negative for seed29; waveform-loss benefit is not uniform",
+      "Supplemental sources remain separate; no pooled overall score",
+      "Additional seed weights have no separate streaming/deployment acceptance",
+      "Engineering completion does not establish user mastery"
+    ],
+    "evidence_sha256": {
+      "replications/reports/three_seed_summary.json": "cd7a64e28a6e6872075d5a396575dd99311b8a62d227f3d109f835bf543ef76d",
+      "replications/artifacts/library/GTCRN项目学习与结果_三种子复验完成.html": "cda945f49e29e5b6a253f92836cf78e3b27eda2403d0b061e19b0d82516f5ade",
+      "replications/reports/learning_complete.json": "c013dbb658db29d41c4403fea770fd19cb75f270160d3265a086f124bedab709",
+      "replications/reports/final_unit_tests.txt": "7994a91344f73120d8b6880560e43577845170b40378d0a6ddaae176efd7a585",
+      "replications/sync_github.py": "167dc9ec12f15bb8689f15bb3ee9828d855a8db8747d7cd1dba282f4f70139d0",
+      "replications/test_replications.py": "4786ee4bb4aad11fe88b7af03e657e0737ea1b87dd52bf14238c79253a2ad1b2",
+      "replications/finalize_delivery.py": "f25cfc4ebaff77d7b326e82d9e2b8229fe1d5752dda81f19c2d39244afe0863d"
+    }
+  }
+}

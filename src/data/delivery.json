@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-09T16:41:29.925Z",
+  "site": {"status": "published", "label": "站点已发布"},
+  "localIntegration": {
+    "status": "passed",
+    "label": "本地真实联调",
+    "checkCount": 22,
+    "scope": "真实执行器、冻结模型推理、音频回传与重复性；不包含真实浏览器和设备听感。",
+    "evidence": "real-runner-verification-20261110.json"
+  },
+  "cloudRoundtrip": {
+    "status": "pending",
+    "label": "本机 → 线上回传",
+    "reason": "本机请求受到 Cloudflare 403 拦截，线上派发、领取与结果回传仍待验证。",
+    "platformAuthorizationAttempted": true,
+    "evidence": "production-check.json"
+  },
+  "browser": {"status": "not_tested", "label": "真实浏览器交互"},
+  "soundcard": {"status": "not_tested", "label": "真实声卡播放"},
+  "microphone": {"status": "not_tested", "label": "实时麦克风"},
+  "localWorkspace": {"independent": true, "label": "本地独立工作台，记录不与线上同步"},
+  "boundary": "部署记录独立于冻结实验；本地联调通过不代表云端闭环、浏览器或真实设备已经通过。"
+}

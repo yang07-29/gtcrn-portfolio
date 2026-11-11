@@ -1,0 +1,41 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "portable/reports/portable_long_20261024.json",
+  "sourceSha256": "e80d52f02a93a4960e599ad9335230ecaf67f0e6de88121ec496fc0fab383ac8",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "status": "passed",
+    "utc": "2026-10-23T17:40:29.989486+00:00",
+    "host": "yang27",
+    "python": "3.13.9",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.4.4",
+      "onnxruntime": "1.31.0",
+      "soundfile": "0.13.1"
+    },
+    "torch_imported": false,
+    "threads": 1,
+    "audio_seconds": 1800,
+    "input_samples": 28800000,
+    "output_samples": 28800000,
+    "callbacks": 112500,
+    "mean_ms": 0.7857162586972117,
+    "p95_ms": 0.9971999214030802,
+    "p99_ms": 1.1946000158786774,
+    "max_ms": 3.6902001593261957,
+    "callbacks_over_16ms": 0,
+    "compute_rtf": 0.049107699279751005,
+    "wall_seconds": 88.79893239983357,
+    "flush_ms": 0.77960011549294,
+    "first_output_after_received_samples": 512,
+    "network_state_bytes": 72192,
+    "dsp_mutable_cache_bytes": 6144,
+    "model_sha256": "356bb3c94765b354138a40c9c09e0de7d39684c76e2b43a706c509e8ecb5ab03",
+    "source_sha256": {
+      "benchmark.py": "1d7ba2aafe6c3b129a83ef4ad676b7aebb6e7cb3788ebb975f4430a405d4dfe6",
+      "gtcrn_portable/engine.py": "d42188d2a5cdf9376db1563727be8b6a5bd78accde6b9a9682a7e0861e08382d"
+    },
+    "scope": "push timing includes NumPy STFT, ORT network, OLA. Excludes input generation, file/device I/O and model initialization. 30 minutes of audio may run faster than wall clock; no hard-real-time, process-memory or physical end-to-end claim."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "robustness/results/external_noise_v1/acceptance.json",
+  "sourceSha256": "eb0fd9d01f6b383d74b7b1d2c0854fd2dc0d4223081343bd004d4fc38d5626bd",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "status": "passed",
+    "utc": "2026-10-23T17:37:40.158479+00:00",
+    "run_name": "external_noise_v1",
+    "raw_records_checked": 392,
+    "mixed_records": 384,
+    "clean_controls": 8,
+    "original_recording_ids": 12,
+    "creator_accounts": 12,
+    "categories": 4,
+    "registered_old_noise_overlap": 0,
+    "external_case_creator_overlap": 0,
+    "external_case_creators_checked": [
+      "back ache",
+      "neil carmichael",
+      "xaqaii"
+    ],
+    "external_case_protocol_sha256": "40abb2a9186ab33bcd7bdd7371996fb7603036aae16d03e22b783bc0b1ecde56",
+    "paired_groups_independently_recomputed": 288,
+    "maximum_recalculation_difference": 0.0,
+    "alpha_endpoint_and_midpoint_checks": "passed",
+    "frozen_code_and_input_hashes_verified": [
+      "robustness/prepare.py",
+      "robustness/evaluate.py",
+      "robustness/summarize.py",
+      "robustness/sources.json",
+      "robustness/download_manifest.json",
+      "src/gtcrn_project/inference.py",
+      "src/gtcrn_project/audio.py",
+      "src/gtcrn_project/metrics.py",
+      "src/gtcrn_project/data.py",
+      "vendor/gtcrn/gtcrn.py"
+    ],
+    "evidence_sha256": {
+      "protocol.json": "98d529619d31f1fd7013afb889fa4f3030c709ffdd23e46cc6e7c41cb7141c93",
+      "manifest.jsonl": "03bf8a7a7b028657f031328c7a75d4e745b61c83b387ae04d251dbef1cf498e7",
+      "freeze.json": "67d62e3624ebdf033ee0b446dc3436ecd41604ecb6e18892b1d38761c1e9473e",
+      "sources.json": "0c1afbca87f33b7d8b9a672bc114ba258df8e6e3403b102bdbe0069b651e3210",
+      "results\\external_noise_v1\\run.json": "32cd023c1ae27ada6930691a724cede0adcf02b0262f2a25cb68896b1f66e42f",
+      "results\\external_noise_v1\\per_example.jsonl": "a7c6002500d1156c02c5614e6d87713de75c3fcd5ef5715b3223adfa29886fde",
+      "results\\external_noise_v1\\summary.json": "5023b8a7f37e6e9b8b116f6bc81076fcab0e77b40fd0c3bda397fbf6ceac39b5"
+    },
+    "limitations": [
+      "No retraining or seed repetition in this extension.",
+      "New noise sources but four already-tested speech utterances.",
+      "No significance or real headphone deployment claim.",
+      "Raw audio metadata label is not subjective listening verification."
+    ]
+  }
+}

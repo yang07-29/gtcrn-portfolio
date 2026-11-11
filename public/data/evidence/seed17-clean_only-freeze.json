@@ -1,0 +1,115 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "reports/evaluations/final_seed17_v1_clean_only/freeze.json",
+  "sourceSha256": "824cbfb1f187d0752ce43e7a435a56ce303a584452fd532822e3ff459852250b",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-18T13:36:32.430021+00:00",
+    "identity": {
+      "suite": "clean_only",
+      "split": "test",
+      "manifest": "manifests/voicebank_test.jsonl.gz",
+      "expected_examples": 824,
+      "inputs": {
+        "manifests/voicebank_test.jsonl.gz": "18743f57eac9ba823cc0086115fda9e47016d46eed3de66e46d477fab2d54f4d",
+        "reports/voicebank_test_audit.json": "cbbe26d12fd2120531442124cf53cc17c1a023158d93ea408ea351d159fcd6b4",
+        "reports/final_model_registry.json": "88d2224e4dec77ca7ed6a9eb84e622ab35735dd2d11b73b17e2bee3986e90bb9",
+        "configs/evaluation_protocol.json": "da12d42f09bbf94d3247bab872821d45ddb5e88c80c7da273db7b883a3f6a120",
+        "configs/data_protocol.json": "4c5cf4cef1bb0468373ee3d8e4b40fae94d7ebe2bddca914a5ea9289071bcd3e",
+        "configs/final_decision_protocol.json": "d2747794f9425a99c32fb240db252640cb744a370ad5ce9c71809abd03eee481",
+        "configs/controlled_protocol.json": "ce47414f28a73251cbda3bd9e1dc63c425ec69aaa85db3fbb146e3bb895975a6",
+        "configs/generalization_sources.json": "d4547ce14804b8edd47c2e951520a6a82d8120e183021581189046b5b0322c2b",
+        "reports/noise_downloads.json": "d0fbd6d8e14f29e200440d2105b67ff808eac3b5b48dbf9a07711a5c13804971",
+        "reports/noise_semantic_qc.json": "d137b781230533baad46e9b6877c18b206708e2eadf9a54ddbe93c595e730a0c",
+        "reports/generalization_noise_sources.json": "50d40b68b8c4c690799f5216d4048e28e637d740975e208c7871c25cfa3bd2de",
+        "src/gtcrn_project/evaluation_data.py": "f8c8fa4660fe1a0289026f2db094123c870a3ecdc3466f4cd9233759cfa53d35",
+        "src/gtcrn_project/data.py": "f602ba724dc3d6c22843eac710a817de847f62bb516490c03b3ef2f39938780e",
+        "src/gtcrn_project/controlled_data.py": "2c43e3ea70748f13851a6db9829c215396b026cf350e432491e5b556877976fa",
+        "src/gtcrn_project/metrics.py": "4c4b67ca45c7e2e416f4b0ee808ce4c33d0098b383a1d0a72e02b1a065d8efa8",
+        "src/gtcrn_project/baselines.py": "37bc6e188f8cb9efef7cdf403a7bd577ab66f73fa580d3c7a1366c2ca4563582",
+        "src/gtcrn_project/audio.py": "17879f84d2e130194d06f6be636c5b3dc04d70816b70c44bbf0fa238cdd49b3e",
+        "src/gtcrn_project/inference.py": "7062cf37643a8ba79ac7c5dc8e9533bbee8dda75d0bfbfec1b73d4eede2a886e",
+        "src/gtcrn_project/training_state.py": "83a15f0a6db6a78f17e48d5593dbce3ba159a874252a860c4123d0f088d7c51d",
+        "vendor/gtcrn/gtcrn.py": "20bf0610702506fa45cd543454b84bbeb862d73c7c20a3f8d820fdc04da6099b",
+        "scripts/evaluate_final.py": "cf401b038fa50b2e8de61c24545f37f4278f0ed7c6bc0807cfdd14d95761fabe"
+      },
+      "models": {
+        "E0": {
+          "kind": "noisy"
+        },
+        "E1": {
+          "kind": "fixed_spectral_subtraction"
+        },
+        "E2": {
+          "kind": "external_author",
+          "path": "artifacts/upstream/checkpoints/model_trained_on_dns3.tar",
+          "sha256": "a630d992cf792daf4ce2bb5bcf9c4d389f740a8f09c6e0971184697fe6371b79",
+          "limitation": "external training-source overlap unknown"
+        },
+        "E3": {
+          "kind": "trained",
+          "path": "runs/e3_seed17_v1/checkpoint_0118800.pt",
+          "sha256": "b9213d04dd260121748b4874974840feaa48100d6383f36b3661b6d49a46248b",
+          "selection": "absolute minimum original-validation canonical HybridLoss, earliest update for exact tie; no test input",
+          "update": 118800
+        },
+        "E3c": {
+          "kind": "trained_continuation",
+          "path": "runs/branch_seed17_v1_E3c/checkpoint_0005000.pt",
+          "sha256": "00b4a983e10fd6bce90c91bc2081ef7a9e816c336b1107194dc292b25aa86bb4",
+          "update": 5000,
+          "parent_sha256": "b9213d04dd260121748b4874974840feaa48100d6383f36b3661b6d49a46248b",
+          "plan_sha256": "9dd2b66460e74f6c64a94ac48032f6b23f72598c0d1834c2003e2b71629d4764",
+          "policy_sha256": "94ac98d443a538479c681d9bd3e8f5f756d3f111d376d55af85ca52f81760dd7",
+          "waveform_weight": 1.0
+        },
+        "E4": {
+          "kind": "trained_continuation",
+          "path": "runs/branch_seed17_v1_E4/checkpoint_0005000.pt",
+          "sha256": "c4475ed04a3678546bb88cb70434ca6c72179844521116386196c3e875b3a46b",
+          "update": 5000,
+          "parent_sha256": "b9213d04dd260121748b4874974840feaa48100d6383f36b3661b6d49a46248b",
+          "plan_sha256": "9dd2b66460e74f6c64a94ac48032f6b23f72598c0d1834c2003e2b71629d4764",
+          "policy_sha256": "94ac98d443a538479c681d9bd3e8f5f756d3f111d376d55af85ca52f81760dd7",
+          "waveform_weight": 1.0
+        },
+        "E5": {
+          "kind": "trained_continuation",
+          "path": "runs/branch_seed17_v1_E5/checkpoint_0005000.pt",
+          "sha256": "bb1e03aad156fc34d68331bc107f4506715c2378260b462dd8f680358a077628",
+          "update": 5000,
+          "parent_sha256": "b9213d04dd260121748b4874974840feaa48100d6383f36b3661b6d49a46248b",
+          "plan_sha256": "9dd2b66460e74f6c64a94ac48032f6b23f72598c0d1834c2003e2b71629d4764",
+          "policy_sha256": "94ac98d443a538479c681d9bd3e8f5f756d3f111d376d55af85ca52f81760dd7",
+          "waveform_weight": 0.0
+        }
+      },
+      "methods": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E3c",
+        "E4",
+        "E5"
+      ],
+      "device": "cuda",
+      "threads": 1,
+      "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+      "packages": {
+        "torch": "2.11.0+cu128",
+        "numpy": "2.4.4",
+        "scipy": "1.16.3",
+        "soundfile": "0.13.1",
+        "pystoi": "0.4.1"
+      },
+      "alignment": "exact waveform lengths; no post-hoc alignment/normalization/padding",
+      "primary_comparisons": [
+        "E4-E3c",
+        "E4-E5"
+      ],
+      "aggregation": "per-example method means with valid counts; paired differences use exact valid intersections; no significance claim",
+      "supplemental_aggregation": "no pooled overall mean; separate category/source results"
+    }
+  }
+}

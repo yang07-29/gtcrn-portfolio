@@ -1,0 +1,119 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "external_cases/keyboard_public_v1/protocol.json",
+  "sourceSha256": "40abb2a9186ab33bcd7bdd7371996fb7603036aae16d03e22b783bc0b1ecde56",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "case_id": "keyboard_public_v1",
+    "status": "fixed_before_download_and_model_inference",
+    "purpose": "One unfamiliar public recording case requested after completion of all original and three-seed tests. This is not a new training or validation set.",
+    "sources": {
+      "speech": {
+        "title": "A Dream Within a Dream",
+        "creator": "Neil Carmichael",
+        "account": "Back ache",
+        "date": "2020-11-20",
+        "page": "https://commons.wikimedia.org/wiki/File:A_Dream_Within_a_Dream.ogg",
+        "permanent_page": "https://commons.wikimedia.org/w/index.php?title=File:A_Dream_Within_a_Dream.ogg&oldid=883982074",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/A_Dream_Within_a_Dream.ogg",
+        "filename": "A_Dream_Within_a_Dream.ogg",
+        "bytes": 565524,
+        "sha1": "44757227ea2d83491eb754204033d0115c276465",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_claim": "Own work; reading of Edgar Allan Poe's 1849 poem. Reference recording may contain residual room or microphone noise; not asserted anechoic or noise-free.",
+        "crop_seconds": [
+          10,
+          20
+        ]
+      },
+      "noise": {
+        "title": "Cherry Mx reds sound for cherry gmbh wikipedia page",
+        "creator": "Xaqaii",
+        "account": "Xaqaii",
+        "date": "2021-05-01",
+        "page": "https://commons.wikimedia.org/wiki/File:Cherry_Mx_reds_sound_for_cherry_gmbh_wikipedia_page.wav",
+        "permanent_page": "https://commons.wikimedia.org/w/index.php?title=File:Cherry_Mx_reds_sound_for_cherry_gmbh_wikipedia_page.wav&oldid=1262978828",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Cherry_Mx_reds_sound_for_cherry_gmbh_wikipedia_page.wav",
+        "filename": "Cherry_Mx_reds_sound_for_cherry_gmbh_wikipedia_page.wav",
+        "bytes": 2949418,
+        "sha1": "2d3bc354f75eb94d4b4220a8a7779c0da3c3079f",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_claim": "Own work; Cherry MX Red keyboard sound. No claim of exhaustive listening validation.",
+        "crop_seconds": [
+          2,
+          12
+        ]
+      }
+    },
+    "preprocessing": {
+      "sample_rate": 16000,
+      "channels": "arithmetic mean of source channels before resampling",
+      "resampling": "scipy.signal.resample_poly full decoded recording, float64, default Kaiser(beta=5.0), constant padding; then exact half-open crop",
+      "duration_seconds": 10,
+      "snr_db": 0.0,
+      "speech_target_rms": 0.05,
+      "noise_scaling": "noise RMS equals scaled speech RMS / 10**(snr_db/20), RMS measured over whole 10 seconds including pauses",
+      "joint_gain": "min(1, 0.95 / max(abs(reference), abs(scaled_noise), abs(reference+scaled_noise))) applied identically to all three",
+      "storage": "160000 float32 samples, 16000 Hz mono FLOAT WAV; no mean removal, individual output normalization, denoising of reference, or time-alignment search",
+      "qc_gates": "finite inputs, expected source bytes/SHA1, crop in bounds, source crop RMS>1e-4, >=20% of 100ms speech frames above 10% of its peak frame RMS (energy proxy, not VAD), no input clipping after joint gain, achieved SNR within 1e-5 dB",
+      "qc_failure_policy": "stop and report the technical failure before any model inference; never replace source or crop based on model scores"
+    },
+    "models": {
+      "seed": 17,
+      "primary": "E4",
+      "control": "E3c",
+      "E4": {
+        "path": "runs/branch_seed17_v1_E4/checkpoint_0005000.pt",
+        "sha256": "c4475ed04a3678546bb88cb70434ca6c72179844521116386196c3e875b3a46b"
+      },
+      "E3c": {
+        "path": "runs/branch_seed17_v1_E3c/checkpoint_0005000.pt",
+        "sha256": "00b4a983e10fd6bce90c91bc2081ef7a9e816c336b1107194dc292b25aa86bb4"
+      },
+      "E4_ONNX": {
+        "path": "artifacts/onnx/gtcrn_e59bbdc339e37a90.onnx",
+        "sha256": "356bb3c94765b354138a40c9c09e0de7d39684c76e2b43a706c509e8ecb5ab03"
+      },
+      "policy": "Use frozen accepted seed17 E4 and matched E3c, no new model selection, checkpoint selection, retraining, tuning, alternate seeds, or expanded SNR sweep. Report all outcomes including negative ones."
+    },
+    "inference": {
+      "device": "CPU",
+      "threads": 1,
+      "dtype": "float32",
+      "chunk_samples": 256,
+      "primary_comparison": "E4 minus E3c, both existing TorchFrameProcessor + StreamingDSP, independent reset state and explicit EOF flush",
+      "deployment_check": "accepted E4 ONNX through identical StreamingDSP; maxabs versus E4 PyTorch incremental must be <=1e-4, report all output lengths and errors",
+      "offline_check": "E4 and E3c incremental versus existing Enhancer.tensor offline, each maxabs<=1e-4",
+      "listening": "E4 ONNX output, E3c PyTorch incremental, noisy mixture, reference, and scaled keyboard noise; PCM16 copies use exactly the same fixed gain, no per-file loudness adjustment",
+      "timing": "Record one-run wall time only as provenance, not a new latency benchmark or device deployment claim"
+    },
+    "metrics": {
+      "function": "src/gtcrn_project/metrics.py:evaluate_pair",
+      "source_sha256": "4c4b67ca45c7e2e416f4b0ee808ce4c33d0098b383a1d0a72e02b1a065d8efa8",
+      "report": [
+        "si_sdr_db",
+        "stoi",
+        "gain_sensitive_sdr_db",
+        "mse",
+        "rms_gain_db",
+        "projection_gain",
+        "metric_flags"
+      ],
+      "optional_metrics": "PESQ and DNSMOS not added for this bounded case",
+      "unit_of_evidence": "One 10-second synthetic mixture from one external keyboard recording and one public speech recording; no confidence interval, significance, or population generalization claim"
+    },
+    "source_exclusion_limits": [
+      "Audit excludes all 14 registered additional noise recording IDs and 12 creator accounts, original official demo, and all registered VoiceBank source-file hashes.",
+      "VoiceBank source metadata uses anonymous speaker IDs and lacks original noise recording IDs. Different platforms/accounts and file hashes do not prove different natural persons or rule out transformed reposts.",
+      "Both new source pages describe own work. Neither source is included in this project's recorded training/validation/test manifests; unknown physical identity or undocumented upstream overlap cannot be categorically excluded.",
+      "No E2 official pretrained model is run; its full training sources are unknown."
+    ],
+    "distribution": {
+      "source_and_derived_audio_license": "CC BY-SA 4.0; credit both creators, source URLs, license URL, and transformations (mono, resample, crop, gain, synthetic mix, GTCRN enhancement). No endorsement implied.",
+      "github": "code, protocol, source/hash provenance, compact reports and compact learning HTML only; source recordings and derived WAV/embedded full HTML stay in ignored local artifact directories and the requested Library delivery",
+      "human_learning": "Engineering completion and user listening/understanding remain separate; user listening and understanding are not yet assessed."
+    }
+  }
+}

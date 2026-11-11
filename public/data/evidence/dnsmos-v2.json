@@ -1,0 +1,16 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "reports/evaluations/dnsmos_auxiliary_seed17_v2/summary.json",
+  "sourceSha256": "067c9ae98885dce80c9b3a99b1cbc6a30f27aebcced226c08236a586676e3f50",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-18T14:54:20.365109+00:00",
+    "status": "completed",
+    "attempted": 619,
+    "planned": 619,
+    "failed": 0,
+    "failures": [],
+    "scope": "Auxiliary fixed small subset, not full test quality or listener scores; repeated short-audio windows are not independent samples.",
+    "reference_free_demo": "No SI-SDR/STOI/PESQ reference metrics; unknown recording provenance and no listening judgment"
+  }
+}

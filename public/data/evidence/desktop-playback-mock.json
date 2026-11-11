@@ -1,0 +1,23 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "portable/reports/desktop_acceptance_20261024_v2.json",
+  "sourceSha256": "73d7cf8225cd0c5e586585b8a921570df4906a1b8832c669efc0ff3ba28a9a0e",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "status": "passed",
+    "utc": "2026-10-24T06:46:47.343831+00:00",
+    "host": "yang27",
+    "checks": [
+      "Malformed evidence disables only its card, without blocking inference UI",
+      "Three tabs, all learning/source/evidence selections read real local content",
+      "Real 10-second inference through Tk event loop; plots and button state populated",
+      "Duplicate run and close-during-write guarded; all UI mutations on main thread",
+      "Playback/stop route to real PCM16 paths (device playback mocked; not heard)",
+      "Invalid file produces visible error and retained diagnostic; stale listening disabled",
+      "Recovery after error and clean-control inference pass"
+    ],
+    "scope": "Tk widget/state and actual ONNX file-inference checks; no live microphone, device playback quality or headphone hardware validation",
+    "demo_model_sha256": "356bb3c94765b354138a40c9c09e0de7d39684c76e2b43a706c509e8ecb5ab03",
+    "torch_imported": false
+  }
+}

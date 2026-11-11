@@ -1,0 +1,15 @@
+{
+  "representation": "sanitized_excerpt",
+  "sourcePath": "reports/delivery_cli_acceptance.json",
+  "sourceSha256": "9b8cb69d61ec5f94632fcdb09bb9c9219e6ba858b609f139bd3b3d42794f13af",
+  "note": "此文件为经筛选脱敏的证据摘录，不冒充原始文件字节。",
+  "data": {
+    "utc": "2026-10-18T14:26:41.772019+00:00",
+    "status": "passed",
+    "input_samples": 156302,
+    "output_samples": 156302,
+    "stream_vs_offline_maxabs": 2.0023435354232788e-07,
+    "chunk_pattern_maxabs": 0.0,
+    "scope": "Thin file-driven CLI checks; reuses accepted DSP/model; no soundcard or chip claim"
+  }
+}
